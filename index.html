@@ -1,0 +1,230 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Marketing Guide for Small Business | NerdyJacky</title>
+    <meta name="description" content="Learn how small businesses use AI to access enterprise-level marketing. Free guide with 10 proven tactics. No consultant needed.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+```
+    body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        line-height: 1.6;
+    }
+    
+    .container {
+        max-width: 600px;
+        width: 100%;
+        background: white;
+        border-radius: 16px;
+        padding: 48px 40px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+    
+    .logo {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: #764ba2;
+        margin-bottom: 32px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        font-weight: 800;
+        color: #1a202c;
+        margin-bottom: 20px;
+        line-height: 1.2;
+        text-align: center;
+    }
+    
+    .subheadline {
+        font-size: 18px;
+        color: #4a5568;
+        margin-bottom: 32px;
+        text-align: center;
+        line-height: 1.6;
+    }
+    
+    .benefits {
+        list-style: none;
+        margin-bottom: 32px;
+    }
+    
+    .benefits li {
+        padding: 12px 0;
+        padding-left: 32px;
+        position: relative;
+        color: #2d3748;
+        font-size: 16px;
+    }
+    
+    .benefits li:before {
+        content: "✓";
+        position: absolute;
+        left: 0;
+        color: #48bb78;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .form-container {
+        margin-bottom: 24px;
+    }
+    
+    input[type="email"] {
+        width: 100%;
+        padding: 16px 20px;
+        font-size: 16px;
+        border: 2px solid #e2e8f0;
+        border-radius: 8px;
+        margin-bottom: 16px;
+        transition: border-color 0.3s;
+        font-family: inherit;
+    }
+    
+    input[type="email"]:focus {
+        outline: none;
+        border-color: #764ba2;
+    }
+    
+    button {
+        width: 100%;
+        padding: 18px 32px;
+        font-size: 18px;
+        font-weight: 700;
+        color: white;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-family: inherit;
+    }
+    
+    button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(118, 75, 162, 0.3);
+    }
+    
+    button:active {
+        transform: translateY(0);
+    }
+    
+    .trust-line {
+        text-align: center;
+        font-size: 14px;
+        color: #718096;
+        margin-top: 16px;
+    }
+    
+    .success-message {
+        display: none;
+        background: #c6f6d5;
+        border: 2px solid #48bb78;
+        color: #22543d;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    
+    @media (max-width: 640px) {
+        .container {
+            padding: 32px 24px;
+        }
+        
+        h1 {
+            font-size: 28px;
+        }
+        
+        .subheadline {
+            font-size: 16px;
+        }
+        
+        .benefits li {
+            font-size: 15px;
+        }
+    }
+</style>
+```
+
+</head>
+<body>
+    <div class="container">
+        <div class="logo">NERDYJACKY</div>
+
+```
+    <h1>Get Enterprise-Level Marketing Without the Enterprise Budget</h1>
+    
+    <p class="subheadline">
+        Fortune 500 companies pay $100K+ for the marketing strategies you're about to learn. AI just made them accessible to every small business. Free guide inside.
+    </p>
+    
+    <ul class="benefits">
+        <li>10 AI-powered marketing tactics that actually work</li>
+        <li>No expensive consultants or agencies needed</li>
+        <li>Tools that automate what used to require a full team</li>
+        <li>Start competing with big companies today</li>
+        <li>Real examples from small businesses like yours</li>
+    </ul>
+    
+    <div class="success-message" id="successMessage">
+        🎉 Success! Check your email for the free guide.
+    </div>
+    
+    <form class="form-container" id="emailForm">
+        <input 
+            type="email" 
+            id="emailInput" 
+            placeholder="Enter your email" 
+            required
+            aria-label="Email address"
+        >
+        <button type="submit">Get Free Guide</button>
+    </form>
+    
+    <p class="trust-line">
+        Free guide delivered instantly. No spam, unsubscribe anytime.
+    </p>
+</div>
+
+<script>
+    const form = document.getElementById('emailForm');
+    const emailInput = document.getElementById('emailInput');
+    const successMessage = document.getElementById('successMessage');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const email = emailInput.value;
+        
+        console.log('Email submitted:', email);
+        
+        successMessage.style.display = 'block';
+        form.style.display = 'none';
+        
+        // TODO: Integrate with Beehiiv
+        // When ready, add your Beehiiv API integration here
+    });
+</script>
+```
+
+</body>
+</html>

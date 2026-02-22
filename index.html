@@ -264,28 +264,8 @@
             button.disabled = true;
             button.textContent = 'Sending...';
 
-            try {
-                // Submit to Beehiiv
-                const response = await fetch(`https://magic.beehiiv.com/v1/e5d67ff1-cafb-4266-971c-414eb1e59396?email=${encodeURIComponent(email)}`, {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    mode: 'no-cors'
-                });
-
-                // Show success message
-                successMessage.style.display = 'block';
-                form.style.display = 'none';
-
-                console.log('Email submitted to Beehiiv:', email);
-            } catch (error) {
-                console.error('Error submitting email:', error);
-
-                // Still show success to user (no-cors mode doesn't allow error checking)
-                successMessage.style.display = 'block';
-                form.style.display = 'none';
-            }
+            // Redirect to Beehiiv magic link (proper way)
+            window.location.href = `https://magic.beehiiv.com/v1/e5d67ff1-cafb-4266-971c-414eb1e59396?email=${encodeURIComponent(email)}`;
         });
     </script>
 </body>
